@@ -106,7 +106,7 @@ input[type="submit"] {
 	    color-stop(0.23, #619702),
 	    color-stop(0.62, #7ac000)
 	);
-    background: -moz-linear-gradient(
+    background: -moz-linear-gradient (
 	    center bottom,
 	    #619702 23%,
 	    #7ac000 62%
@@ -123,14 +123,14 @@ input[type="submit"] {
 
 input[type="submit"]:hover { 
     background-color: #ff5400;
-    background: -webkit-gradient(
+    background: -webkit-gradient (
 	    linear,
 	    left bottom,
 	    left top,
 	    color-stop(0.23, #c34000),
 	    color-stop(0.62, #ff5400)
 	);
-	background: -moz-linear-gradient(
+	background: -moz-linear-gradient (
 	    center bottom,
 	    #c34000 23%,
 	    #ff5400 62%
