@@ -26,7 +26,7 @@ body {
     background: linear-gradient(135deg, #1e2021 1%,#4a4e54 50%,#0c0309 100%); 
     /* IE6-9 fallback on horizontal gradient */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2021', endColorstr='#0c0309',GradientType=1 ); 
-    font-family: 'LeagueGothicRegular',Arial,Helvetica,"Liberation Sans"; 
+    font-family: 'LeagueGothicRegular',Arial,Helvetica,"Liberation Sans";
 }
 
 h1 {
