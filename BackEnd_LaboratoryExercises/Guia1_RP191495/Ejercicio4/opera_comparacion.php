@@ -20,6 +20,5 @@ echo $a > $b, "<br>";
 echo $a >= $c, "<br>";
 echo $b <= $c, "<br>";
 ?>
-
 </body>
 </html>
