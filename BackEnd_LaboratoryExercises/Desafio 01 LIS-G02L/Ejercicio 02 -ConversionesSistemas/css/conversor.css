@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background: url(../img/bg.jpg) top center repeat-x #a4d1bc;
+    font-size: 16px;
+}
+
+header h1 {
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+    font: Normal 3.6em 'BebasNeueRegular',Tahoma,Helvetica,'Liberation Sans';
+    text-align: center;
+}
+
+footer{
+text-align: center;
+margin: 0;
+font-size: .9em;
+line-height: 2;
+clear: both;
+background-color: #464d52;
+color: white;
+width: 100%;
+}
+
+.contenedor{
+    background:#f9f1ed;
+    box-shadow: 0 0 5px .5px black;
+    height:auto;
+    margin:0 auto;
+    max-width:400px;
+    margin-top: 6%;
+    min-height:160px;
+    width:36%;
+}
+.content-select select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Eliminamos la fecha que por defecto aparece en el desplegable */
+.content-select select::-ms-expand {
+    display: none;
+}
+
+.content-select{
+    max-width: 250px;
+    position: relative;
+}
+ 
+.content-select select{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+    border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #7b7b7b;
+    font-size: 1em;
+    color: #999;
+    font-family: 
+    'Quicksand', sans-serif;
+    border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+ 
+.content-select select:hover{
+    background: #B1E8CD;
+}
+ 
+/* 
+Creamos la fecha que aparece a la izquierda del select.
+Realmente este elemento es un cuadrado que sólo tienen
+dos bordes con color y que giramos con transform: rotate(-45deg);
+*/
+.content-select i{
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 13px);
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-left:4px solid #2AC176;
+    border-bottom:4px solid #2AC176;
+    transform: rotate(-45deg); /* Giramos el cuadrado */
+    transition: all 0.25s ease;
+}
+ 
+.content-select:hover i{
+    margin-top: 3px;
+}
+
+.contenedor a {
+    font:Bold 0.9em 'Nobile',Arial,Helvetica,sans-serif;
+    color:#90bf7f;
+    text-decoration:none;
+}
+
+.contenedor a:hover {
+    color:#60a03c;
+    text-decoration:underline;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.encabezado{
+    font-size:14pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 0 1px  5px black;
+    text-align:center;
+    background: url(../img/hform.jpg) repeat;
+    height:50px;
+    line-height: 50px;
+    
+}
+
+input{
+    margin:15px;
+    width:331px;
+    height:50px;
+    font-size:14pt;
+    border-radius:5px;
+    border:none;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    font-weight:bold;
+    color:#90bf7f;
+}
+
+input[type="text"]{
+    text-align:center;
+    background:url(../img/icon-fact.png) no-repeat;
+    background-position: 10px ;
+}
+
+input[type="submit"]{
+    height:36px;
+    border-radius:5px ;
+    cursor: pointer;
+    background: url(../img/hform.jpg) repeat;
+    font-size:13px;
+    color:white;
+    text-shadow: 0 1px  5px black;
+    margin-right:40px;
+    float:center;
+    width:120px;
+}
+
+textarea{
+    background:url(../img/icon-mensaje.png) no-repeat;
+    background-position: 10px ;
+    border-radius:5px;
+    border:none;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    color:#90bf7f;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14pt;
+    font-weight:bold;
+    height:138px;
+    text-align:center;
+    width:331px;
+}
+
+.formulario{
+    height: 1%;
+    overflow: hidden;
+    padding-top:24px;
+    text-align:center;
+}
+
+.divisor{
+    margin-top:10px;
+    background:url("../img/divisor.png");
+    height:1px;
+    width:416px;
+}
+
+#numbersOnly         {
+    background: #febbbb; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #febbbb 0%, #fe9090 46%, #ff5c5c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#febbbb), color-stop(46%,#fe9090), color-stop(100%,#ff5c5c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* IE10+ */
+    background: linear-gradient(135deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border:3px groove rgb(230,40,5);
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    -o-border-radius: 12px 12px 12px 12px;
+    -ms-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+    color:White;
+    font:Bold 8pt 'Nobile',Arial,Helvetica,sans-serif;
+    padding: 6px 5px;
+    visibility:hidden;
+}

@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<!-- Daniel Alexander Reyes Pineda - RP191495 -->
 	<!-- Luis Alberto Del Cid Rivera - DR200018 -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/conversor.css">
 	<title>Convertidor de números</title>
 </head>
 <body>
 <section>
-<div>
+<div class="contenedor">
 	<form action="" method="POST">
+		<header>
+			<h1>Conversor de sistemas de numeración</h1>
+		</header>
 	<div>
-		<input type="text" name="numero" id="numero" placeholder="Ingrese un valor a convertir">
+		<center><input type="text" name="numero" id="numero" placeholder="Ingrese un valor a convertir"></center>
 	</div>
-	<label>Seleccione los sistemas que desea convertir:</label>
+	<div class="encabezado">
+	<center><label>Seleccione los sistemas que desea convertir:</label></center>
+    </div>
+    <br>
+	<center><div class="content-select">
 	 <select class="form-control" name="sistema1" id="sistema1">
 		<option value="S01" selected>Sistema decimal</option>
 		<option value="S02">Sistema binario</option>
 		<option value="S03">Sistema octal</option>
 		<option value="S04">Sistema hexadecimal</option>
 	</select>
+	<i></i>
+    </div></center>
+    <br>
+    <center><div class="content-select">
 	<select class="form-control" name="sistema2" id="sistema2">
 		<option value="S01">Sistema decimal</option>
 		<option value="S02" selected>Sistema binario</option>
 		<option value="S03">Sistema octal</option>
 		<option value="S04">Sistema hexadecimal</option>
 	</select>
-	<input type="submit" name="convertir" value="Convertir">	
-	</form> 
-</div>
-<article>
+	<i></i>
+	</div></center>	
+	<br>
+	<center><input type="submit" name="convertir" value="Convertir"><center>
+	<div class="encabezado"> 
 <?php
 if(isset($_POST['convertir'])){ 
  $resultado="";
@@ -39,71 +52,79 @@ if(isset($_POST['convertir'])){
  $Sistema1=isset($_POST['sistema1']) ? $_POST['sistema1'] : "";
  $Sistema2=isset($_POST['sistema2']) ? $_POST['sistema2'] : "";
 
-//Estructura de control con las opciones de entrada.	
+if($Valor != "") {
 switch ($Sistema1) {
 	case 'S01':
 		//Estructura de control con las opciones de salida.
-		if($Sistema2=="S02"){
+		if($Sistema2=="S02" && is_numeric($Valor)){
             $resultado=decbin($Valor);
-		    echo $resultado;
+		    echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
-		elseif($Sistema2=="S03"){
+		elseif($Sistema2=="S03" && is_numeric($Valor)){
             $resultado=decoct($Valor);
             echo($resultado);
 		}
 		elseif($Sistema2=="S04"){
 			$resultado=dechex($Valor);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 
 		else{
-			echo $Valor;
+			echo "El resultado de la conversion es: " . $Valor;
 		}
 
 		break;
 			
 	case 'S02':
 
-	    if($Sistema2=="S01"){
+	    if($Sistema2=="S01" && is_numeric($Valor)){
             $resultado=bindec($Valor);
-		    echo $resultado;
+		    echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
-		elseif($Sistema2=="S03"){
+		elseif($Sistema2=="S03" && is_numeric($Valor)){
 			$temp=bindec($Valor);
             $resultado=decoct($temp);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 		elseif($Sistema2=="S04"){
 			$temp=bindec($Valor);
 			$resultado=dechex($temp);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 
 		else{
-			echo $Valor;
+			echo "El resultado de la conversion es: " . $Valor;
 		}
 
 		break;
 
 	case 'S03':
 
-	    if($Sistema2=="S01"){
+	    if($Sistema2=="S01" && is_numeric($Valor)){
             $resultado=octdec($Valor);
-		    echo $resultado;
+		    echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
-		elseif($Sistema2=="S02"){
+		elseif($Sistema2=="S02" && is_numeric($Valor)){
 			$temp=octdec($Valor);
             $resultado=decbin($temp);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 		elseif($Sistema2=="S04"){
 			$temp=octdec($Valor);
 			$resultado=dechex($temp);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 
 		else{
-			echo $Valor;
+			echo "El resultado de la conversion es: " . $Valor;
 		}
    
 		break;
@@ -112,21 +133,24 @@ switch ($Sistema1) {
 
         if($Sistema2=="S01"){
             $resultado=hexdec($Valor);
-		    echo $resultado;
+		    echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 		elseif($Sistema2=="S02"){
 			$temp=hexdec($Valor);
             $resultado=decbin($temp);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 		elseif($Sistema2=="S03"){
 			$temp=hexdec($Valor);
 			$resultado=decoct($temp);
-            echo($resultado);
+            echo "El resultado de la conversion es: " . $resultado;
+		    echo "</div>";
 		}
 
 		else{
-			echo $Valor;
+			echo "El resultado de la conversion es: " . $Valor;
 		}
 
 		break;
@@ -135,10 +159,17 @@ switch ($Sistema1) {
 	
 		break;
 }
+	}
+	else {
+		echo "Ingrese primero un valor";
+	}	
 }
-	
 ?>
-</article>
+</form>
+</div>
 </section>
+<footer>
+        Lenguaje interpretado en el servidor - 2023
+</footer>
 </body>
 </html>
