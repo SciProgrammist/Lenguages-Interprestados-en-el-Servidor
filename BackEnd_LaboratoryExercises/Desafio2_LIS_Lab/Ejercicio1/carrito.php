@@ -72,9 +72,10 @@ session_start();
            <td><b>Total</b></td>
            <td>$" .number_format($total,2)."</td>
            <td>
-              <button type='submit' class='btn btn-danger' name ='vaciar'>Vaciar carrito</button>
+           <button type='submit' class='btn btn-warning' name ='confirmar'>Confirmar compra</button>
           </td>
         </tr>
+        <button type='submit' class='btn btn-danger' name ='vaciar'>Vaciar carrito</button>
         </form>
         ";
       }
@@ -93,6 +94,10 @@ session_start();
         session_unset();
         session_destroy();
         header('Location: carrito.php');
+      }
+
+      if(isset($_POST['confirmar'])){
+        echo "<script>alert('Su compra se ha realizado correctamente');</script>";
       }
       
     ?>
