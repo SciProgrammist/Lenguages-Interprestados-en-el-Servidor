@@ -39,17 +39,32 @@ if (isset($_POST['añadir'])){
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"crossorigin="anonymous"> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<title>Tienda de productos</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container-fluid">
+        <img src="img/logo_market.png" alt="logo" width="100px" height="70px" class="d-inline-block align-top">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="navbar-item active">
+                   <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                </li>
+                <li class="navbar-item active">
+                   <a class="nav-link active" aria-current="page" href="carrito.php">Carrito</a>
+                </li>
+            </ul>
+        </div>
+   </div>
+</nav>
+<div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Productos disponibles</h1>
+        </div>
+</div>
 <div class="container">
-<header>
-	<h1>Productos disponibles</h1>
-  <a href="carrito.php"><img src="img/carro.png" width="50px;"></a>
-  <a href="index.php"><img src="img/inicio.png" width="50px;"></a>
-
-</header>
 <div class="row">
 <?php
   //Cargando el archivo index
@@ -57,11 +72,11 @@ if (isset($_POST['añadir'])){
   
   //Mostramos los productos que esten dentro de la categoria de carnes
     for($i=0; $i<count($producto); $i++){   
-        echo "<form action='carnes.php' method='POST'>";
         if($producto[$i]->getCategoria()=="Carnes"){
-          $producto[$i]->mostrar();    
+          echo "<form action='carnes.php' method='POST'>";
+          $producto[$i]->mostrar(); 
+          echo "</form>";   
         }
-        echo "</form>";
         } 
     
 ?>

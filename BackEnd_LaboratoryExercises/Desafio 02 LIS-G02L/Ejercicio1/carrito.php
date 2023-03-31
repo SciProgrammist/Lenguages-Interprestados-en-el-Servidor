@@ -8,12 +8,28 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"crossorigin="anonymous"> 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
-    <h1>Carrito de compras</h1>
-    <div class="col-md-6">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container-fluid">
+        <img src="img/logo_market.png" alt="logo" width="100px" height="70px" class="d-inline-block align-top">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="navbar-item active">
+                   <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                </li>
+            </ul>
+        </div>
+   </div>
+</nav>
+<div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Carrito de compras</h1>
+        </div>
+</div>
+    <div class="container">
     <?php
 
       $salida="";
@@ -21,12 +37,12 @@ session_start();
       $salida .= "
       <table class='table table-bordered table-striped'>
       <tr>
-        <th>Nombre</th>
-        <th>Marca</th>
-        <th>Precio</th>
-        <th>Cantidad</th>
-        <th>Total</th>
-        <th>Acciones</th>
+        <th class='table-dark'>Nombre</th>
+        <th class='table-dark'>Marca</th>
+        <th class='table-dark'>Precio</th>
+        <th class='table-dark'>Cantidad</th>
+        <th class='table-dark'>Total</th>
+        <th class='table-dark'>Acciones</th>
       <tr>
       ";
 
@@ -81,6 +97,5 @@ session_start();
       
     ?>
     </div>
-    <a href="index.php"><img src="img/inicio.png" width="50px;"></a>
 </body>
 </html>

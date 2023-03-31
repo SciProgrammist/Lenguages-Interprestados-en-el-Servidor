@@ -1,0 +1,38 @@
+
+#categorias img{
+    width: 100%;
+	height: auto;
+    float:left;
+    margin-right: 20px;
+    
+}
+
+.row{
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.card img{
+    width: 300px;
+	height: auto;
+    float:left;
+    margin-right: 20px;
+}
+
+.col{
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header{
+    justify-content: center;
+    text-align: center;
+}
+
+.card{
+    width: 400px;
+}
+
+#cantidad{
+    text-align: center;
+}

@@ -30,8 +30,8 @@ class producto   {
         //El método mostrar() crea una tabla HTML donde se muestran 
         //los detalles del objeto auto, como la marca, una imagen,
         //el modelo y el color del auto.
-        $tabla  = "<div class='col-4 mb-3'>";
-        $tabla  .="<div class='card'>";
+        $tabla  = "<div class='col'>";
+        $tabla  .="<div class='card mx-auto'>";
         $tabla  .="<div class='card-header'>". $this->nombre ."</div>";
         $tabla  .="<img class='card-img-top' src='". $this->image ."' alt='Card image cap'>";
         $tabla  .="<div class='card-body'>";
@@ -43,13 +43,16 @@ class producto   {
         $tabla .= "<input type='hidden' name='nombre' value=".$this->nombre.">";
         $tabla .= "<input type='hidden' name='marca' value=".$this->marca.">";
         $tabla .= "<input type='hidden' name='precio' value=".$this->precio.">";
-        $tabla .= "<input type='number' name='cantidad' value='1' class='form-control'>";
-        $tabla .= "<input type='submit' name='añadir' class='btn btn-warning' value='Añadir al carrito'>";
+        $tabla .= "<input type='number' min='1'  id='cantidad' name='cantidad' value='1' class='form-control'>";
+        $tabla  .="<br>";
+        $tabla .= "<input type='submit' name='añadir' class='btn btn-warning mx-auto d-block' value='Añadir al carrito'>";
         
         $tabla  .="</div>";
         $tabla  .="</div>";
         $tabla  .="</div>";
+        $tabla  .="<br>";
         echo $tabla;
+        
     }
 
     //Metodo para comprobar la categoria de un objeto de la clase producto
