@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
@@ -47,20 +48,58 @@
             printf("<p class=\"resp\">D = √((%5.2lf-%5.2lf)<sup>2</sup> + (%5.2lf-%5.2lf)<sup>2</sup>)</p>\n", $coord2->x, $coord1->x, $coord2->y, $coord1->y);
         } else {
             ?>
+        <div class="contact-form">
+            <!-- Titulo -->
+            <div class="title">Calculo de la distancia entre dos puntos</div>
+            <!--Texto indicativo -->
+            <p class="intro">Ingrese las coordenadas </p>
+            <!--Area de formulario -->
             <div class="contact-form">
-                <!-- Titulo -->
-                <div class="title">Calculo de la distancia entre dos puntos</div>
-                <!--Texto indicativo -->
-                <p class="intro">Ingrese las coordenadas </p>
-                <!--Area de formulario -->
-                <div class="contact-form">
                 <!-- Formulario -->
                 <div class="w-100">
                     <!-- Campos de formulario -->
                     <form name="frmrectangulo" id="frmrectangulo" action="<?PHP echo $_SERVER['PHP_SELF'] ?>" method="POST">
-                    <!-- <form name="frmrectangulo" id="frmrectangulo" action="javascript:void(0);"> -->
-    
-    <?PHP
+                        <!-- <form name="frmrectangulo" id="frmrectangulo" action="javascript:void(0);"> -->
+                        <!-- Coordenada 1 (x1, y1) -->
+                        <label>Coordenada 1 (x1, y1) : </label>
+                        <div class="field">
+                            <input type="number" name="coordx1" id="coordx1" min="0" max="1000" step=".1"
+                                placeholder="(x1)" required />
+                            <span class="entypo-base icon"></span>
+                            <span class="slick-tip left">Ingrese la coordenada x1:</span>
+                        </div>
+                        <div class="field">
+                            <input type="number" name="coordy1" id="coordy1" min="0" max="1000" step=".1"
+                                placeholder="(y1)" required />
+                            <span class="entypo-base icon"></span>
+                            <span class="slick-tip left">Ingrese la coordenada y1:</span>
+                        </div>
+                        <!-- Coordenada 2 (x2, y2) -->
+                        <label>Coordenada 2 (x2,y2):</label>
+                        <div class="field">
+                            <input type="number" name="coordx2" id="coordx2" min="0" max="1000" step=".1"
+                                placeholder="(x2)" required />
+                            <span class="entypo-base icon"></span>
+                            <span class="slick-tip left">Ingrese la coordenada x2:</span>
+                        </div>
+                        <div class="field">
+                            <input type="number" name="coordy2" id="coordy2" min="0" max="1000" step=".1"
+                                placeholder="(y2)" required />
+                            <span class="entypo-base icon"></span>
+                            <span class="slick-tip left">Ingrese la coordenada y2:</span>
+                        </div>
+                        <!--Botones para hacer los calculos -->
+                        <input type="submit" value="Calcular" class="send" name="submit" id="perimetro" />
+                        <input type="reset" value="Restablecer" class="send" name="reset" id="area" />
+
+                    </form>
+                </div>
+            </div>
+            <?PHP
 
         }
         ?>
+    </section>
+</body>
+
+</html>

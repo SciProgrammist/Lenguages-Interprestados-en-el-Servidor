@@ -21,7 +21,7 @@
             $name = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
             $apellido = (isset($_POST['apellido'])) ? $_POST['apellido'] : "";
             $sueldo = (isset($_POST['sueldo'])) ? doubleval($_POST['sueldo']) : 0.0;
-            $numHorasExtra = (isset($_POST['horasextras'])) ? intval($_POST['horasextras']) : 0;
+            $numHorasExtra = (isset($_POST['horaextras'])) ? intval($_POST['horaextras']) : 0;
             $pagohoraextra = (isset($_POST['pagohoraextra'])) ? floatval($_POST['pagohoraextra']) : 0.0;
 
             //creando instancias de la clase empleado
