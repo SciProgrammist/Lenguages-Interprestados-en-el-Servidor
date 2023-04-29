@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistema de gestion de libros</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/modernizr.custom.lis.js"></script>
+</head>
+
+<body class="container">
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <span class="navbar-text">
+                <h1>Gestion de libros</h1>
+            </span>
+        </nav>
+
+    </header>
+    <div>
+        <div id="menubuttons">
+            <!---User's buttons made for interaction with the main function of the wep app-->
+            <div class="col-md-2" id="uno">
+                <a class="btn btn-block btn-lg btn-success" data-toggle="modal" data-target="#mymodal"
+                    href="menuopciones.html" target="_self" title="Menú principal">
+                    <img class="icon" src="img/icon-home.png" alt="#"><br>
+                    <span class="texto_grande"> Inicio </span>
+                </a>
+            </div>
+            <div class="col-md-2" id="dos">
+                <a class="btn btn-block btn-lg btn-danger" data-toggle="modal" data-target="#mymodal"
+                    href="nuevolibro.html" target="_self" title="Nuevo Libro">
+                    <img class="icon" src="img/icon-new.png" alt="#"><br>
+                    <span class="texto_grande"> Nuevo libro</span>
+                </a>
+            </div>
+            <div class="col-md-2" id="cuatro">
+                <a class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#mymodal"
+                    href="mostrarlibros.php?opc=modificar" target="_self" title="Modificar libro">
+                    <img class="icon" src="img/icon-edit.png" alt="#"><br>
+                    <span class="texto_grande">Modificar</span>
+                </a>
+            </div>
+            <div class="col-md-2" id="cinco">
+                <a class="btn btn-block btn-lg btn-warning"
+                    href="mostrarlibros.php?opc=eliminar" target="_self" title="Eliminar libro">
+                    <img class="icon" src="img/icon-trash.png" alt="#"><br>
+                    <span class="text_grande">Eliminar libro</span>
+                </a>
+            </div>
+            <div class="col-md-2" id="seis">
+                <a class="btn btn-block btn-lg btn-info"
+                    href="busquedalibro.html" target="_self" title="Consular libro">
+                    <img class="icon" src="img/icon-query.png" alt="#"> <br>
+                    <span class="texto_grande">Consular libro(s)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
