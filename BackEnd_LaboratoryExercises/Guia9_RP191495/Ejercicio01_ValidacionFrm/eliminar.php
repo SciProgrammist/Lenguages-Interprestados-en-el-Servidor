@@ -14,7 +14,7 @@
        $result = $db->query($sql);
        $row = $result->fetch_assoc();
 
-       $smg = "<script text=\"text/javascript\">\n";
+       $msg = "<script text=\"text/javascript\">\n";
 
        $preg  = "Deseas eliminar el libro de: isbn = ";
        $preg .= "isbn = " . $row['isbn'] . ",";
@@ -25,6 +25,7 @@
        $msg .= "if(confirm(\"" . $preg . "\")){";
        $msg .= "location.href=\"mostrarlibros.php?opc=eliminar&del=s&id=" . $isbn . "\";}";
        $msg .= "else{location.href=\"mostrarlibros.php?opc=eliminar&del=n\";}</script>";
+
 
        echo mb_convert_encoding($msg, 'UTF-8', 'ISO-8859-1');
 

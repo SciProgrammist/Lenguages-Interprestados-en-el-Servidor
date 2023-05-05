@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistema de gestion de estudiantes UDB</title>
+    <link rel="icon" href="img/udb.jpg">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/modernizr.custom.lis.js"></script>
+</head>
+
+<body class="container menu">
+    <header>
+        <br/>
+        <nav class="navbar navbar-dark bg-primary">
+             <img class="col-md-3 nav-icon" src="img/udb.jpg" alt="Image">
+                <span class="navbar-text lg-md-8">
+                    <h1>Gestion de Bade de datos para la Universidad Don Bosco.</h1>
+                </span>
+            
+        </nav>
+
+    </header>
+    <div>
+        <div id="menubuttons">
+            <!---User's buttons made for interaction with the main function of the wep app-->
+            <div class="col-md-2" id="uno">
+                <a class="btn btn-block btn-lg btn-info" data-toggle="modal" data-target="#mymodal"
+                    href="CRUD_BD_Estudiantes_UDB.html" target="_self" title="Menú principal">
+                    <img class="icon" src="img/icon-home.png" alt="#"><br>
+                    <span class="texto_grande"> Home </span>
+                </a>
+            </div>
+
+            <div class="col-md-2 " id="tres">
+                <a class="btn btn-block btn-lg btn-success" data-toggle="modal" data-target="#mymodal"
+                    href="nuevo_estudiante.php" target="_self" title="Nuevo Estudiante">
+                    <img class="icon" src="img/icons8-people-74.png" alt="#"><br>
+                    <span class="texto_grande ">Agregar</span>
+                </a>
+            </div>
+
+
+            <div class="col-md-2" id="cuatro">
+                <a class="btn btn-block btn-lg btn-warning" data-toggle="modal" data-target="#mymodal"
+                    href="mostrarEstudiante.php?opc=modificar" target="_self" title="Modificar libro">
+                    <img class="icon" src="img/icon-edit.png" alt="#"><br>
+                    <span class="texto_grande">Modificar</span>
+                </a>
+            </div>
+
+            <div class="col-md-2" id="cinco">
+                <a class="btn btn-block btn-lg btn-danger" href="mostrarEstudiante.php?opc=eliminar" target="_self"
+                    title="Eliminar libro">
+                    <img class="icon" src="img/icon-trash.png" alt="#"><br>
+                    <span class="text_grande">Eliminar</span>
+                </a>
+            </div>
+
+            <div class="col-md-2" id="seis">
+                <a class="btn btn-block btn-lg btn-info" href="busquedaEstudiante.php" target="_self"
+                    title="Consular libro">
+                    <img class="icon" src="img/icon-query.png" alt="#"> <br>
+                    <span class="text_grande">Busqueda</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

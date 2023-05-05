@@ -90,7 +90,7 @@
                 <div class="element-number form-group">
                     <label class="title"></label>
                     <div class="item-cont">
-                        <input class="form-control" type="text" name="titulo" value="<?PHP echo $row['titulo'] ?>"
+                        <input class="form-control" type="text" name="titulo" value="<?PHP echo $row['precio'] ?>"
                             maxlength="8" placeholder="Precio" class="larger" />
                         <span class="icon-place"></span>
                     </div>

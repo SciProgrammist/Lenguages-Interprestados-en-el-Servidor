@@ -1,0 +1,41 @@
+
+/*To hide the add up buttons of the number class of Bootstrap*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* In order to set an icon in the nav of the first menu*/
+.nav-icon {
+  
+  height: 180px;
+  width: 170px; 
+  padding: 2rem;
+}
+
+nav h1{
+    padding-top: 20px;
+}
+
+
+/*General styles for the web to look nice.*/
+html {
+  min-height: 100%;
+}
+
+.menu {
+  background: linear-gradient(#b5e48c, #457b9d) fixed;
+}
+
+
+.navbar-brand {
+  text-decoration-color: chartreuse;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#menubuttons {
+    padding-left: 140px;
+}
+
