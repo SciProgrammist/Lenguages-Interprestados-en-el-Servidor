@@ -64,14 +64,14 @@
 
          $querystring = "";
          foreach ($carrito as $ref => $unidades) {
-            $querystring .= "$ref = $unidades&";
+            $querystring .= "$ref=$unidades&";
          }
          echo "
          <div class='row'>
          <div class='col'>
             <div class='card'>
             <div class='card-header bg-info'>ref1</div>
-            <div class='card-body'>Descripcion: Artículo 1 <br>Precio:5&euro;</div>
+            <div class='card-body'>Descripcion: Artículo 1 <br>Precio:5 &euro;</div>
             <div class='card-footer'><a href='./compra.php?{$querystring}articulo=ref1' title='Añadir al carrito'>
             Comprar </a></div>
             </div>
@@ -87,7 +87,7 @@
             <div class='col'>
             <div class='card'>
             <div class='card-header bg-info'>ref3</div>
-            <div class='card-body'>Descripcion: Artículo 3<br>Precio:2 &euro;</div>
+            <div class='card-body'>Descripcion: Artículo 3 <br>Precio:2 &euro;</div>
             <div class='card-footer'><a href='./compra.php?{$querystring}articulo=ref3' title='Añadir al carrito'>
             Comprar </a></div>
             </div>
